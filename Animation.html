@@ -1,0 +1,263 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Animation</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .animated-box {
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+            position: absolute;
+            animation:  move-across-screen 5s ease-in 0s infinite;
+        }
+
+        @keyframes move-across-screen {
+            0% {
+                left: 0rem;
+                background-color: red;
+                transform: rotate(0deg);
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                left: 100%;
+                background-color: green;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-box"></div>
+</body>
+
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Animation</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .animated-box {
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+            position: absolute;
+            animation:  move-across-screen 5s ease-in 0s infinite;
+        }
+
+        @keyframes move-across-screen {
+            0% {
+                left:0;
+                top:0;
+                background-color: red;
+                transform: rotate(0deg);
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                left:100%;
+                top:100%;
+                background-color: green;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-box"></div>
+</body>
+
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Animation</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .animated-box {
+            width: 5rem;
+            height: 5rem;
+            background-color: red;
+            position: absolute;
+            animation:  move-across-screen 5s ease-in 0s infinite;
+        }
+
+        @keyframes move-across-screen {
+            0% {
+                right:0;
+                top:0;
+                background-color: red;
+                transform: rotate(0deg);
+            }
+            50% {
+                background-color: yellow;
+            }
+            100% {
+                right:100%;
+                top:100%;
+                background-color: green;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animated-box"></div>
+</body>
+
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagonal Animation</title>
+    <style>
+        body {
+            display: flex;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .square {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+        }
+
+        .square:nth-child(1) {
+            background-color: red;
+            top: 0rem;
+            left: 0rem;
+            animation: move-down-left 3s ease-in-out 0s infinite;
+        }
+
+        .square:nth-child(2) {
+            background-color: yellow;
+            top: 0rem;
+            right: 0rem;
+            animation: move-down-right 3s ease-in-out 0s infinite;
+        }
+
+        .square:nth-child(3) {
+            background-color: green;
+            bottom: 0rem;
+            left: 0rem;
+            animation: move-up-left 3s ease-in-out 0s infinite;
+        }
+
+        .square:nth-child(4) {
+            background-color: blue;
+            bottom: 0rem;
+            right: 0rem;
+            animation: move-up-right 3s ease-in-out 0s infinite;
+        }
+
+        @keyframes move-down-left {
+            0% {
+                left: 0rem;
+                top: 0rem;
+                transform: rotate(0deg);
+            }
+            100% {
+                left: calc(50% - 2.5rem);
+                top: calc(50% - 2.5rem);
+                transform: rotate(360deg);
+                background-color: orange;
+                border-radius: 100%;
+            }
+        }
+
+        @keyframes move-down-right {
+            0% {
+                right: 0rem;
+                top: 0rem;
+                transform: rotate(0deg);
+            }
+            100% {
+                right: calc(50% - 2.5rem);
+                top: calc(50% - 2.5rem);
+                transform: rotate(360deg);
+                background-color: orange;
+                border-radius: 100%;
+            }
+        }
+
+        @keyframes move-up-left {
+            0% {
+                left: 0rem;
+                bottom: 0rem;
+                transform: rotate(0deg);
+            }
+            100% {
+                left: calc(50% - 2.5rem);
+                bottom: calc(50% - 2.5rem);
+                transform: rotate(360deg);
+                background-color: orange;
+                border-radius: 100%;
+            }
+        }
+
+        @keyframes move-up-right {
+            0% {
+                right: 0rem;
+                bottom: 0rem;
+                transform: rotate(0deg);
+            }
+            100% {
+                right: calc(50% - 2.5rem);
+                bottom: calc(50% - 2.5rem);
+                transform: rotate(360deg);
+                background-color: orange;
+                border-radius: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+</body>
+
+</html>
